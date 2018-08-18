@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
     "koa": "^2.5.2",
     "koa-route": "^3.2.0",
     "request": "^2.88.0",
