@@ -32,8 +32,12 @@ const main = async ctx => {
   }
   await new Promise((resolve, reject) => {
     request(`http://dili.bdatu.com/${path}`)
-    .then(function (body) {
+    .then((body) => {
       ctx.response.body = body;
+      resolve();
+    }, (error) => {
+      ctx.response.status = error.statusCode;
+      ctx.response.body = error;
       resolve();
     });
   });
